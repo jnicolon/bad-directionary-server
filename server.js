@@ -16,7 +16,7 @@ mongoose.connect(uri, { useNewUrlParser: true }).then(() => {
   app.use(express.json());
   app.use("/api", routes);
 
-  app.listen(5000, () => {
+  app.listen(process.env.PORT || 5000, () => {
     console.log("Server has started at http://localhost:5000/");
   });
 });
