@@ -19,7 +19,7 @@ router.get("/words", async (req, res) => {
 //to get a specific word in the collection
 router.get("/singleword", async (req, res) => {
   const caseSensitiveWord = req.query.word.toLowerCase();
-
+  console.log(caseSensitiveWord);
   const word = await Word.findOne({ word: caseSensitiveWord });
   res.send(word);
 });
